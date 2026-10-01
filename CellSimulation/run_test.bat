@@ -1,0 +1,11 @@
+g++ -I../ReichLibs -IContainerLib -IStringLib -INeuralLib -I2DLib -I2DLib/TextureLib -I../openglLibs -ICellSimulation ^
+StringLib\string_lib.cpp NeuralLib\neural_lib.cpp ^
+2DLib\2d_object_lib.cpp 2DLib\collision_shape.cpp 2DLib\collision_object.cpp 2DLib\collision_handler.cpp 2DLib\scene.cpp ^
+2DLib\TextureLib\shader.cpp 2DLib\TextureLib\vbo.cpp 2DLib\TextureLib\ebo.cpp 2DLib\TextureLib\vao.cpp 2DLib\TextureLib\mesh.cpp 2DLib\TextureLib\material.cpp 2DLib\TextureLib\polygon_lib.cpp 2DLib\TextureLib\engine.cpp 2DLib\TextureLib\renderer.cpp 2DLib\TextureLib\camera.cpp ^
+CellSimulation\cell.cpp CellSimulation\food.cpp CellSimulation\simulation_drawer.cpp CellSimulation\simulation_interface.cpp CellSimulation\simulation_ui.cpp ^
+glad.c ^
+test_simulation.cpp ^
+-o test ^
+-L../openglLibs/GLFW ^
+-lglfw3 -lopengl32 -lgdi32 -luser32 -lkernel32 ^
+ && test
